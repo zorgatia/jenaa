@@ -1,4 +1,4 @@
-def JENA_VERSION='3.16.0'
+def JENA_VERSION='3.12.0'
 def DATASET_FILES='dataset/*'
 def TDB_LOCATION='run/databases/dataset'
 
