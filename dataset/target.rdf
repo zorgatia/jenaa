@@ -1,10 +1,1102 @@
 <?xml version="1.0"?>
-<rdf:RDF
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-  xmlns:schema="http://schema.org/"
-  xml:base="http://fusekitest.herokuapp.com/sample/">
-  <rdf:Description rdf:about="somenode">
-    <schema:name xml:lang="ja">name of something</schema:name>
-    <rdf:type rdf:resource="http://schema.org/Thing"/>
-  </rdf:Description>
+<rdf:RDF xmlns="https://ws-esprit-2021.herokuapp.com/movies#"
+     xml:base="https://ws-esprit-2021.herokuapp.com/movies"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:movies="https://ws-esprit-2021.herokuapp.com/movies#"
+     xmlns:schema="http://schema.org/">
+    <owl:Ontology rdf:about="https://ws-esprit-2021.herokuapp.com/movies"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schema.org/image -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/image"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Distribution -->
+
+    <owl:ObjectProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Distribution">
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Movies"/>
+        <rdfs:range rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Givet_To -->
+
+    <owl:ObjectProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Givet_To">
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Actor_Aword"/>
+        <rdfs:range rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Actor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Works_in -->
+
+    <owl:ObjectProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Works_in">
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Person"/>
+        <rdfs:range rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Movies"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#cast_by -->
+
+    <owl:ObjectProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#cast_by">
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Movies"/>
+        <rdfs:range rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#category_is -->
+
+    <owl:ObjectProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#category_is">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#category_of -->
+
+    <owl:ObjectProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#category_of">
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Category"/>
+        <rdfs:range rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Movies"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#composed_by -->
+
+    <owl:ObjectProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#composed_by">
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Movies"/>
+        <rdfs:range rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#directed_by -->
+
+    <owl:ObjectProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#directed_by">
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Movies"/>
+        <rdfs:range rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#is_Rated -->
+
+    <owl:ObjectProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#is_Rated">
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Movies"/>
+        <rdfs:range rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Rating_Service"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#married_to -->
+
+    <owl:ObjectProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#married_to">
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Person"/>
+        <rdfs:range rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#rated_by -->
+
+    <owl:ObjectProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#rated_by">
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Rating_Service"/>
+        <rdfs:range rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Movies"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#screenplay_by -->
+
+    <owl:ObjectProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#screenplay_by">
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Movies"/>
+        <rdfs:range rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Aword_Country -->
+
+    <owl:DatatypeProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Aword_Country">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Awards"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Aword_Description -->
+
+    <owl:DatatypeProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Aword_Description">
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Awards"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Aword_Title -->
+
+    <owl:DatatypeProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Aword_Title">
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Awards"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Aword_Year -->
+
+    <owl:DatatypeProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Aword_Year">
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Awards"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#CategoryName -->
+
+    <owl:DatatypeProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#CategoryName"/>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Country -->
+
+    <owl:DatatypeProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Country">
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Date_Naissance -->
+
+    <owl:DatatypeProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Date_Naissance">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Date_sortie -->
+
+    <owl:DatatypeProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Date_sortie">
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Movies"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Description -->
+
+    <owl:DatatypeProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Description">
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Actor"/>
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Awards"/>
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Directeur"/>
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Movies"/>
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Musical_Artist"/>
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Writer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#FullName -->
+
+    <owl:DatatypeProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#FullName">
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Gender -->
+
+    <owl:DatatypeProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Gender">
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Link_mp3 -->
+
+    <owl:DatatypeProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Link_mp3">
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Musical_Artist"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#MovieCountry -->
+
+    <owl:DatatypeProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#MovieCountry">
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Movies"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#MoviePicture -->
+
+    <owl:DatatypeProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#MoviePicture">
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Movies"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Nb_Vote -->
+
+    <owl:DatatypeProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Nb_Vote">
+        <rdfs:subPropertyOf rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Rating"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Note -->
+
+    <owl:DatatypeProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Note">
+        <rdfs:subPropertyOf rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Rating"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Occupation -->
+
+    <owl:DatatypeProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Occupation">
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Picture -->
+
+    <owl:DatatypeProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Picture">
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Rating -->
+
+    <owl:DatatypeProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Rating">
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Rating_Service"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Rating_Title -->
+
+    <owl:DatatypeProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Rating_Title">
+        <rdfs:subPropertyOf rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Rating"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Role -->
+
+    <owl:DatatypeProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Role">
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Running_time -->
+
+    <owl:DatatypeProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Running_time">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Movies"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Title -->
+
+    <owl:DatatypeProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Title">
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Movies"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Trailer -->
+
+    <owl:DatatypeProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Trailer">
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Movies"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Years_active -->
+
+    <owl:DatatypeProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Years_active">
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#language -->
+
+    <owl:DatatypeProperty rdf:about="https://ws-esprit-2021.herokuapp.com/movies#language">
+        <rdfs:domain rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Movies"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Actor -->
+
+    <owl:Class rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Actor">
+        <rdfs:subClassOf rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Actor_Aword -->
+
+    <owl:Class rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Actor_Aword">
+        <rdfs:subClassOf rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Awards"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Awards -->
+
+    <owl:Class rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Awards"/>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Category -->
+
+    <owl:Class rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Category">
+        <rdfs:subClassOf rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Movies"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Directeur -->
+
+    <owl:Class rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Directeur">
+        <rdfs:subClassOf rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Directeur_Aword -->
+
+    <owl:Class rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Directeur_Aword">
+        <rdfs:subClassOf rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Awards"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Movie_Aword -->
+
+    <owl:Class rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Movie_Aword">
+        <rdfs:subClassOf rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Awards"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Movies -->
+
+    <owl:Class rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Movies"/>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Music_Aword -->
+
+    <owl:Class rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Music_Aword">
+        <rdfs:subClassOf rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Awards"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Musical_Artist -->
+
+    <owl:Class rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Musical_Artist">
+        <rdfs:subClassOf rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Person -->
+
+    <owl:Class rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Person"/>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Rating_Service -->
+
+    <owl:Class rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Rating_Service">
+        <rdfs:subClassOf rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Movies"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Writer -->
+
+    <owl:Class rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Writer">
+        <rdfs:subClassOf rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Writer_Aword -->
+
+    <owl:Class rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Writer_Aword">
+        <rdfs:subClassOf rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Awards"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Action -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Action">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Category"/>
+        <category_of rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Le_Masque_de_Zorro"/>
+        <category_of rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Mr_Ms_Smith"/>
+        <CategoryName>Action</CategoryName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Andrew_Kevin_Walker -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Andrew_Kevin_Walker">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Writer"/>
+        <FullName>Andrew Kevin Walker</FullName>
+        <Occupation>Writer</Occupation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Angelina_Jolie -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Angelina_Jolie">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Actor"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Mr_Ms_Smith"/>
+        <married_to rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Brad_Pitt"/>
+        <Country>Los Angeles, California, United States</Country>
+        <Date_Naissance>June 4, 1975</Date_Naissance>
+        <FullName>Angelina Jolie</FullName>
+        <Occupation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">actor</Occupation>
+        <Picture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.gstatic.com/tv/thumb/persons/4950/4950_v9_bb.jpg</Picture>
+        <schema:image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.gstatic.com/tv/thumb/persons/4950/4950_v9_bb.jpg</schema:image>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Antonio_Banderas -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Antonio_Banderas">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Actor"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Le_Masque_de_Zorro"/>
+        <Country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malaga, Espagne</Country>
+        <Date_Naissance rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10 août 1960</Date_Naissance>
+        <FullName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antonio Banderas</FullName>
+        <Occupation>Actor</Occupation>
+        <Picture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">actor</Picture>
+        <Picture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.challenges.fr/assets/img/2020/08/10/cover-r4x3w1000-5f3157ac0dc06-l-acteur-antonio-banderas-positif-au-coronavirus.jpg</Picture>
+        <schema:image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.challenges.fr/assets/img/2020/08/10/cover-r4x3w1000-5f3157ac0dc06-l-acteur-antonio-banderas-positif-au-coronavirus.jpg</schema:image>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Aventure -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Aventure">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Category"/>
+        <CategoryName>Aventure</CategoryName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Brad_Pitt -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Brad_Pitt">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Actor"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Fight_Club"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Seven"/>
+        <married_to rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Angelina_Jolie"/>
+        <married_to rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#JenniferAniston"/>
+        <Country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shawnee, Oklahoma, États-Unis</Country>
+        <Date_Naissance rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18 décembre 1963</Date_Naissance>
+        <FullName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brad Pitt</FullName>
+        <Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Men</Gender>
+        <Occupation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">actor</Occupation>
+        <Picture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://cdn-elle.ladmedia.fr/var/plain_site/storage/images/people/la-vie-des-people/news/brad-pitt-a-une-nouvelle-femme-dans-sa-vie-3874275/93729581-1-fre-FR/Brad-Pitt-a-une-nouvelle-femme-dans-sa-vie.jpg</Picture>
+        <schema:image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://cdn-elle.ladmedia.fr/var/plain_site/storage/images/people/la-vie-des-people/news/brad-pitt-a-une-nouvelle-femme-dans-sa-vie-3874275/93729581-1-fre-FR/Brad-Pitt-a-une-nouvelle-femme-dans-sa-vie.jpg</schema:image>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Brian_De_Palma -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Brian_De_Palma">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Directeur"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Mission_impossible"/>
+        <FullName>Brian de palma</FullName>
+        <Occupation>Directeur</Occupation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Brian_Tyler -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Brian_Tyler">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Musical_Artist"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Fight_Club"/>
+        <FullName>Brian Tyler</FullName>
+        <Occupation>Musical Artist</Occupation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Christopher_McQuarrie -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Christopher_McQuarrie">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Directeur"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Mission_impossible"/>
+        <FullName>Christopher McQuarrie</FullName>
+        <Occupation>Directeur</Occupation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Comedy -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Comedy">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Category"/>
+        <category_of rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Horrible_Bosses"/>
+        <CategoryName>Comedy</CategoryName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Danny_Elfman -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Danny_Elfman">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Musical_Artist"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Mission_impossible"/>
+        <FullName>Danny Elfman</FullName>
+        <Occupation>Musical Artist</Occupation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#David_Fincher -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#David_Fincher">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Directeur"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Seven"/>
+        <FullName>David Fincher</FullName>
+        <Occupation>Directeur</Occupation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#David_Koepp -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#David_Koepp">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Writer"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Mission_impossible"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#The_Mummy"/>
+        <FullName>David Koepp</FullName>
+        <Occupation>Writer</Occupation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Doug_Liman -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Doug_Liman">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Directeur"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Mr_Ms_Smith"/>
+        <FullName>Doug Liman</FullName>
+        <Occupation>Directeur</Occupation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Drame -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Drame">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Category"/>
+        <category_of rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Fight_Club"/>
+        <CategoryName>Drame</CategoryName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Dust_Brothers -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Dust_Brothers">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Musical_Artist"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Fight_Club"/>
+        <composed_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Dust_Brothers"/>
+        <Country>Los Angeles, California, United States</Country>
+        <FullName>Dust Brothers</FullName>
+        <Occupation>Musical Artist</Occupation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Fight_Club -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Fight_Club">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Movies"/>
+        <cast_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Brad_Pitt"/>
+        <category_is rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Thriller"/>
+        <composed_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#The_Dust_Brothers"/>
+        <directed_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#David_Fincher"/>
+        <rated_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#IMDB"/>
+        <screenplay_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Jim_Uhls"/>
+        <Date_sortie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1999</Date_sortie>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">movie</Description>
+        <MoviePicture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UY1200_CR85,0,630,1200_AL_.jpg</MoviePicture>
+        <Nb_Vote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1 555 784</Nb_Vote>
+        <Note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8.1</Note>
+        <Rating_Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IMDB</Rating_Title>
+        <Running_time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">151 minutes</Running_time>
+        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fight Club</Title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Horrible_Bosses -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Horrible_Bosses">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Movies"/>
+        <cast_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#JenniferAniston"/>
+        <composed_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Dust_Brothers"/>
+        <directed_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Seth_Gordon"/>
+        <rated_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#IMDB"/>
+        <screenplay_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#John_Francis_Daley"/>
+        <screenplay_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Jonathan_Goldstein"/>
+        <screenplay_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Michael_Markowitz"/>
+        <Date_sortie rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</Date_sortie>
+        <MovieCountry>Estonia</MovieCountry>
+        <MoviePicture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://m.media-amazon.com/images/M/MV5BNzYxNDI5Njc5NF5BMl5BanBnXkFtZTcwMDUxODE1NQ@@._V1_UX182_CR0,0,182,268_AL_.jpg</MoviePicture>
+        <Nb_Vote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">987 215</Nb_Vote>
+        <Note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6.9</Note>
+        <Rating_Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IMDB</Rating_Title>
+        <Title>Horrible Bosses</Title>
+        <schema:image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://m.media-amazon.com/images/M/MV5BNzYxNDI5Njc5NF5BMl5BanBnXkFtZTcwMDUxODE1NQ@@._V1_UX182_CR0,0,182,268_AL_.jpg</schema:image>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Howard_Shore -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Howard_Shore">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Musical_Artist"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Mission_impossible"/>
+        <FullName>Howard Shore</FullName>
+        <Occupation>Musical Artist</Occupation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#IMDB -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#IMDB">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Rating_Service"/>
+        <is_Rated rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Fight_Club"/>
+        <is_Rated rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Horrible_Bosses"/>
+        <is_Rated rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Le_Masque_de_Zorro"/>
+        <is_Rated rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Mission_impossible"/>
+        <is_Rated rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Mr_Ms_Smith"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#James_Horner -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#James_Horner">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Musical_Artist"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Le_Masque_de_Zorro"/>
+        <FullName>James Horner</FullName>
+        <Occupation>Musical Artist</Occupation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#JenniferAniston -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#JenniferAniston">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Actor"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Horrible_Bosses"/>
+        <Country>Sherman Oaks, Los Angeles, California, United States</Country>
+        <Date_Naissance>February 11, 1969</Date_Naissance>
+        <FullName>Jennifer Aniston</FullName>
+        <Occupation>Actor</Occupation>
+        <Picture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://upload.wikimedia.org/wikipedia/commons/1/16/JenniferAnistonHWoFFeb2012.jpg</Picture>
+        <schema:image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://upload.wikimedia.org/wikipedia/commons/1/16/JenniferAnistonHWoFFeb2012.jpg</schema:image>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Jerry_Goldsmith -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Jerry_Goldsmith">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Musical_Artist"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#The_Mummy"/>
+        <FullName>Jerry Goldsmith</FullName>
+        <Occupation>Musical Artist</Occupation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Jim_Uhls -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Jim_Uhls">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Writer"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Seven"/>
+        <FullName>Jim Uhis</FullName>
+        <Occupation>Writer</Occupation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#John_Francis_Daley -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#John_Francis_Daley">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Writer"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Horrible_Bosses"/>
+        <FullName>John Francis Daley</FullName>
+        <Occupation>Writer</Occupation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#John_Powell -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#John_Powell">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Musical_Artist"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Mr_Ms_Smith"/>
+        <FullName>John Powell</FullName>
+        <Occupation>Musical Artist</Occupation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Johnston_McCulley -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Johnston_McCulley">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Writer"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Le_Masque_de_Zorro"/>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">writer</Description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Jonathan_Goldstein -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Jonathan_Goldstein">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Writer"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Horrible_Bosses"/>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">writer</Description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Le_Masque_de_Zorro -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Le_Masque_de_Zorro">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Movies"/>
+        <cast_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Antonio_Banderas"/>
+        <category_is rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Action"/>
+        <composed_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#James_Horner"/>
+        <directed_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Martin_Campbell"/>
+        <rated_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#IMDB"/>
+        <screenplay_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Johnston_McCulley"/>
+        <Date_sortie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1998</Date_sortie>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Movie</Description>
+        <MoviePicture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://images-na.ssl-images-amazon.com/images/I/611Ke9Aso2L._AC_SY879_.jpg</MoviePicture>
+        <Nb_Vote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1 878 524</Nb_Vote>
+        <Note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</Note>
+        <Rating_Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IMDB</Rating_Title>
+        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Le Masque de Zorro</Title>
+        <schema:image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://images-na.ssl-images-amazon.com/images/I/611Ke9Aso2L._AC_SY879_.jpg</schema:image>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Martin_Campbell -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Martin_Campbell">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Directeur"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Le_Masque_de_Zorro"/>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">directeur</Description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Michael_Markowitz -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Michael_Markowitz">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Writer"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Horrible_Bosses"/>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">writer</Description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Mission_impossible -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Mission_impossible">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Movies"/>
+        <cast_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#tom_cruise"/>
+        <category_is rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Action"/>
+        <category_is rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Thriller"/>
+        <composed_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#John_Powell"/>
+        <directed_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Brian_De_Palma"/>
+        <Date_sortie>May 22, 1996</Date_sortie>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Movie</Description>
+        <MovieCountry>canada</MovieCountry>
+        <MoviePicture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/MissionImpossiblePoster.jpg/220px-MissionImpossiblePoster.jpg</MoviePicture>
+        <Note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8.2</Note>
+        <Rating_Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IMDB</Rating_Title>
+        <Running_time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110 minutes</Running_time>
+        <Title>Mission impossible</Title>
+        <schema:image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/MissionImpossiblePoster.jpg/220px-MissionImpossiblePoster.jpg</schema:image>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Morgan_Freeman -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Morgan_Freeman">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Actor"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Seven"/>
+        <Date_Naissance>June 1, 1937</Date_Naissance>
+        <Date_Naissance>USA, Memphis, Tennessee</Date_Naissance>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Actor</Description>
+        <FullName>Morgan Freeman</FullName>
+        <Gender>Male</Gender>
+        <Picture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.bu.edu/files/2013/05/t2_MF-Headshot-030813.jpg</Picture>
+        <schema:image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.bu.edu/files/2013/05/t2_MF-Headshot-030813.jpg</schema:image>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Mr_Ms_Smith -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Mr_Ms_Smith">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Movies"/>
+        <cast_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Angelina_Jolie"/>
+        <cast_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Brad_Pitt"/>
+        <category_is rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Action"/>
+        <composed_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#John_Powell"/>
+        <directed_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Doug_Liman"/>
+        <rated_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#IMDB"/>
+        <screenplay_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Simon_Kinberg"/>
+        <Date_sortie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005</Date_sortie>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Movies</Description>
+        <Note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6.5</Note>
+        <Rating_Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IMDB</Rating_Title>
+        <Title>Mr and Ms Smith</Title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Robert_Towne -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Robert_Towne">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Writer"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Mission_impossible"/>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">writer</Description>
+        <FullName>Robert Towne</FullName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Seth_Gordon -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Seth_Gordon">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Directeur"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Horrible_Bosses"/>
+        <FullName>Seth Gordon</FullName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Seven -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Seven">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Movies"/>
+        <cast_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Brad_Pitt"/>
+        <cast_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Morgan_Freeman"/>
+        <composed_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Howard_Shore"/>
+        <directed_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#David_Fincher"/>
+        <rated_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#IMDB"/>
+        <screenplay_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Andrew_Kevin_Walker"/>
+        <Date_sortie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1995</Date_sortie>
+        <MoviePicture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.ecranlarge.com/media/cache/160x213/uploads/image/001/121/mohx8jgzideamlj1cqdzclyhmry-823.jpg</MoviePicture>
+        <Nb_Vote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1 225 878</Nb_Vote>
+        <Note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8.6</Note>
+        <Rating_Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IMDB</Rating_Title>
+        <Running_time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">127 minutes</Running_time>
+        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seven</Title>
+        <Years_active rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15 septembre 1995</Years_active>
+        <schema:image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.ecranlarge.com/media/cache/160x213/uploads/image/001/121/mohx8jgzideamlj1cqdzclyhmry-823.jpg</schema:image>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Simon_Kinberg -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Simon_Kinberg">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Writer"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Mr_Ms_Smith"/>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">writer</Description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Stephen_Sommers -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Stephen_Sommers">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Directeur"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#The_Mummy"/>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">directeur</Description>
+        <FullName>Stephen Sommers</FullName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#The_Dust_Brothers -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#The_Dust_Brothers">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Musical_Artist"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Fight_Club"/>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">musical artist</Description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#The_Mummy -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#The_Mummy">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Movies"/>
+        <cast_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#tom_cruise"/>
+        <composed_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Brian_Tyler"/>
+        <directed_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Martin_Campbell"/>
+        <rated_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#IMDB"/>
+        <screenplay_by rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#David_Koepp"/>
+        <Date_sortie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017</Date_sortie>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">movie</Description>
+        <MovieCountry>Brazil</MovieCountry>
+        <Nb_Vote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1 201 124</Nb_Vote>
+        <Note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5.4</Note>
+        <Rating_Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IMDB</Rating_Title>
+        <Running_time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">110 Minutes</Running_time>
+        <Title>The Mummy</Title>
+        <schema:image>https://bagogames-com.s3.amazonaws.com/wp-content/uploads/2017/08/03130006/The-Mummy-featured-pic.jpg</schema:image>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#Thriller -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#Thriller">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Category"/>
+        <category_is rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Mission_impossible"/>
+        <category_of rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Fight_Club"/>
+        <CategoryName>Thriller</CategoryName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://ws-esprit-2021.herokuapp.com/movies#tom_cruise -->
+
+    <owl:NamedIndividual rdf:about="https://ws-esprit-2021.herokuapp.com/movies#tom_cruise">
+        <rdf:type rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Actor"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#Mission_impossible"/>
+        <Works_in rdf:resource="https://ws-esprit-2021.herokuapp.com/movies#The_Mummy"/>
+        <Country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Syracuse, État de New York, États-Unis</Country>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">actor</Description>
+        <FullName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tom Cruise</FullName>
+        <Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Men</Gender>
+        <Picture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://upload.wikimedia.org/wikipedia/commons/3/33/Tom_Cruise_by_Gage_Skidmore_2.jpg</Picture>
+        <schema:image rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://upload.wikimedia.org/wikipedia/commons/3/33/Tom_Cruise_by_Gage_Skidmore_2.jpg</schema:image>
+    </owl:NamedIndividual>
 </rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->

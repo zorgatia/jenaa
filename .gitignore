@@ -8,7 +8,7 @@ run/system
 run/system_files
 run/logs
 run/templates
-run/databases/*
+
 !run/databases/.keep
 
 #### Gradle
