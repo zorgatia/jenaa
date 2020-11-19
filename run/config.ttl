@@ -1,7 +1,7 @@
 ## Fuseki Server configuration file.
 
 @prefix :        <#> .
-@prefix fuseki:  <http://jena.apache.org/fuseki#> .
+@prefix fuseki:  <https://ws-esprit-2021.herokuapp.com/ds#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ja:      <http://jena.hpl.hp.com/2005/11/Assembler#> .
